@@ -1,4 +1,4 @@
-import { Container, Paper } from "@mantine/core";
+import { Container, Paper, Title } from "@mantine/core";
 import { useEffect, useState } from "react";
 
 import TodoInput from "./components/TodoInput";
@@ -37,7 +37,10 @@ function App() {
   };
 
   return (
-    <Container size={500} style={{ marginTop: "2rem" }}>
+    <Container size={500} mt={50}>
+      <Title order={1} my={25}>
+        TODO APP
+      </Title>
       <Paper shadow="xs" p="xl" radius="md">
         <TodoInput addTodo={addTodo} />
         <TodoList
